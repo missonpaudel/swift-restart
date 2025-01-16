@@ -50,15 +50,16 @@ print(colors.contains("blue")) //checks if the array contains the given item and
 
 //dictionary it stores key value pairs
 let employee = [
-    //"name" : "Misson",
+    "name" : "Misson",
     "job" : "scroller",
 
 ]
 
 //print(employee)//prints all the data in the dictionary
-print(employee["name"])//when we try to access a key that does not exist in the dictionary it will return nil
+print(employee["job", default: "Unknown"])//when we try to access a key that does not exist in the dictionary it will return nil
 // if we use ! after the key it will force unwrap the value and if the key does not exist it will crash the program
-print(employee["job"], default:"unknown")//if the key does not exist it will print the default value
+print(employee["job"])//if the key does not exist it will print the default value
+print(employee["job", default: "Unknown"])//if the key does not exist it will print the default value and if the default value is not provided it will print as optional("the value in job")
 
 
 
@@ -66,8 +67,10 @@ print(employee["job"], default:"unknown")//if the key does not exist it will pri
 //set
 //sets are similar to arrays except for the fact that they don't allow duplicates and they are unordered
 
-var numbers = set([1,1,2,4,5,9,10])
+var numbers = Set([1,1,2,4,5,9,10])
 print(numbers) // this prints the set by removing the duplicates and the order of elements is not as the same as we added
 
+numbers.insert(3) //adds an element to the set we dont append because there is no order in a set
+numbers.contain(10) //it will run instantly no matter the size of the set
 
 
