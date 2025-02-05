@@ -32,3 +32,23 @@ enum UIstyle {
     case light, dark , system 
 }
 var style : UIstyle = .light
+
+
+//conditionals
+
+let day = "sunday"
+
+switch day {    
+    case "sunday":
+        print("Today is sunday")
+    case "monday":
+        print("Today is monday")
+    
+    default:
+        print("Invalid day")
+
+}
+
+let age = 18
+let status = age >= 18 ? "yes" : "no"
+print (status)
